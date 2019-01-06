@@ -21,6 +21,7 @@ public class WebServicePresenter implements WebService.Presenter {
     @Override
     public void setView(WebService.View view) {
         this.view = view;
+        view.showUser(user);
     }
 
     @Override
