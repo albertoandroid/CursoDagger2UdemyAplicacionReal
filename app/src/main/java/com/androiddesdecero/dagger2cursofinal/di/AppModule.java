@@ -5,6 +5,8 @@ import android.content.Context;
 
 import com.androiddesdecero.dagger2cursofinal.iu.login.Login;
 import com.androiddesdecero.dagger2cursofinal.iu.login.LoginPresenter;
+import com.androiddesdecero.dagger2cursofinal.iu.profile.Profile;
+import com.androiddesdecero.dagger2cursofinal.iu.profile.ProfilePresenter;
 import com.androiddesdecero.dagger2cursofinal.model.User;
 
 import javax.inject.Singleton;
@@ -54,6 +56,12 @@ public class AppModule {
     @Singleton
     Login.Presenter providePresenterLogin(User user){
         return new LoginPresenter(user);
+    }
+
+    @Provides
+    @Singleton
+    Profile.Presenter providesPresenterProfile(User user){
+        return new ProfilePresenter(user);
     }
 
 }

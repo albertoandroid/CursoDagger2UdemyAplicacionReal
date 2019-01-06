@@ -1,6 +1,7 @@
 package com.androiddesdecero.dagger2cursofinal.di;
 
 import com.androiddesdecero.dagger2cursofinal.iu.login.LoginActivity;
+import com.androiddesdecero.dagger2cursofinal.iu.profile.ProfileActivity;
 
 import javax.inject.Singleton;
 
@@ -14,4 +15,5 @@ import dagger.Component;
 @Component(modules = AppModule.class)
 public interface AppComponent {
     void inject(LoginActivity loginActivity);
+    void inject(ProfileActivity profileActivity);
 }
