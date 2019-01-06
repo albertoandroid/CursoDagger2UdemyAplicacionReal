@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".iu.profile.ProfileActivity"></activity>
+        <activity android:name=".iu.profile.ProfileActivity" />
+        <activity android:name=".iu.WebService.WebServiceActivity"></activity>
     </application>
 
 </manifest>
