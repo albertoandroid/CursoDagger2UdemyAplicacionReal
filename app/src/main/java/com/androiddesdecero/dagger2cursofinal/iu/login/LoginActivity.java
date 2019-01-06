@@ -1,4 +1,4 @@
-package com.androiddesdecero.dagger2cursofinal.iu;
+package com.androiddesdecero.dagger2cursofinal.iu.login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
     }
