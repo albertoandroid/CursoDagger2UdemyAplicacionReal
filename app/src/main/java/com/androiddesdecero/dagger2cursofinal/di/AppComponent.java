@@ -1,5 +1,6 @@
 package com.androiddesdecero.dagger2cursofinal.di;
 
+import com.androiddesdecero.dagger2cursofinal.iu.WebService.WebServiceActivity;
 import com.androiddesdecero.dagger2cursofinal.iu.login.LoginActivity;
 import com.androiddesdecero.dagger2cursofinal.iu.profile.ProfileActivity;
 
@@ -16,4 +17,5 @@ import dagger.Component;
 public interface AppComponent {
     void inject(LoginActivity loginActivity);
     void inject(ProfileActivity profileActivity);
+    void inject(WebServiceActivity webServiceActivity);
 }

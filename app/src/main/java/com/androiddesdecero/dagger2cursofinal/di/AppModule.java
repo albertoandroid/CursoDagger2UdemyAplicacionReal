@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 
 import com.androiddesdecero.dagger2cursofinal.api.ApiClient;
+import com.androiddesdecero.dagger2cursofinal.iu.WebService.WebService;
+import com.androiddesdecero.dagger2cursofinal.iu.WebService.WebServicePresenter;
 import com.androiddesdecero.dagger2cursofinal.iu.login.Login;
 import com.androiddesdecero.dagger2cursofinal.iu.login.LoginPresenter;
 import com.androiddesdecero.dagger2cursofinal.iu.profile.Profile;
@@ -105,6 +107,12 @@ public class AppModule {
     @Singleton
     Profile.Presenter providesPresenterProfile(User user){
         return new ProfilePresenter(user);
+    }
+
+    @Provides
+    @Singleton
+    WebService.Presenter providesPresenterWebServie(User user, ApiClient apiClient){
+        return new WebServicePresenter(user, apiClient);
     }
 
 }
