@@ -58,7 +58,7 @@ public class WebServiceActivity extends AppCompatActivity implements WebService.
 
     @Override
     public void showUser(User user) {
-        tvUserName.setText(user.getEdad());
+        tvUserName.setText(user.getUsername());
         tvEdad.setText(user.getEdad());
     }
 }
