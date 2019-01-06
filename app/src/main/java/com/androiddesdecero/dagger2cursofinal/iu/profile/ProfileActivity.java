@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.androiddesdecero.dagger2cursofinal.R;
 import com.androiddesdecero.dagger2cursofinal.di.BaseApp;
 import com.androiddesdecero.dagger2cursofinal.iu.WebService.WebServiceActivity;
+import com.androiddesdecero.dagger2cursofinal.iu.login.LoginActivity;
 import com.androiddesdecero.dagger2cursofinal.model.User;
 
 import javax.inject.Inject;
@@ -42,7 +43,7 @@ public class ProfileActivity extends AppCompatActivity implements Profile.View {
         tvLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                presenter.logout();
             }
         });
 
@@ -70,5 +71,12 @@ public class ProfileActivity extends AppCompatActivity implements Profile.View {
     public void showUser(User user) {
         etEdad.setText(user.getEdad());
         etName.setText(user.getUsername());
+    }
+
+    @Override
+    public void logout() {
+        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
     }
 }

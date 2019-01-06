@@ -26,4 +26,11 @@ public class ProfilePresenter implements Profile.Presenter {
         user.setUsername(updateUser.getUsername());
         user.setEdad(updateUser.getEdad());
     }
+
+    @Override
+    public void logout() {
+        user.setUsername("");
+        user.setEdad("");
+        view.logout();
+    }
 }
