@@ -3,6 +3,7 @@
     package="com.androiddesdecero.dagger2cursofinal">
 
     <application
+        android:name=".di.BaseApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
