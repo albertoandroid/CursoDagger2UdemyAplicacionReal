@@ -41,7 +41,7 @@ public class WebServiceActivity extends AppCompatActivity {
         btHacerPeticionWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
     }
